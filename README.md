@@ -15,7 +15,7 @@ Takes a SoundCloud artist URL, fetches all the MP3 streams and applies ID3 tags.
 
 ## Getting a SoundCloud API key
 
-* To be polite, you should [register for an API key/client id](http://soundcloud.com/you/apps)!
+* To be polite, you should [register for an API key/client id](http://soundcloud.com/you/apps)! Their [developer documentation](https://developers.soundcloud.com/docs/api/guide#authentication) has more detail.
 * If you are impolite, you can try to use the automatic client id detection feature by not specifying a --client-id option.
 * If that fails, you can try to manually look up the client id the soundcloud frontend uses by using your browser's network debugging feature to watch the requests it makes when you load a soundcloud page, and look for a client_id value.
 
