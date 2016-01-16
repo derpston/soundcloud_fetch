@@ -39,7 +39,7 @@ Attempting to fetch a public soundcloud client ID:
 Resolving URL to user... user id: 123456
 Fetching track list... got 2 tracks
 Example_User_-_Track_One.mp3 exists, skipped.
-Example_User_-_Track_Two does not exist.
+Example_User_-_Track_Two.mp3 does not exist.
  * Fetching streams URL... done
  * Fetching MP3... done, got 123456789 bytes
  * Setting ID3 tags... done!
