@@ -25,8 +25,6 @@ string client_id on success."""
     app_js_urls = re.findall("\"(http.+?[^\"]+?/app-.+?js)", response.content)
     stdout("found %d URLs that may be app.js.\n" % len(app_js_urls))
     if len(app_js_urls) == 0:
-        stdout("Failed to find a client ID automatically, please specify one with\n")
-        stdout("the --client-id option. See README for details.")
         return None
     else:
         for url in app_js_urls:
@@ -56,6 +54,10 @@ args = parser.parse_args()
 if args.client_id is None:
     # If the user didn't specify a client_id, try to find one automatically.
     args.client_id = find_client_id()
+
+if args.client_id is None:
+    stdout("Failed to find a client ID automatically, please specify one with\n")
+    stdout("the --client-id option. See README for details.")
     raise SystemExit(1)
 
 client = soundcloud.Client(client_id=args.client_id)
